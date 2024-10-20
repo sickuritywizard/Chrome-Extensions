@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Host Replacer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
+        width: 350px;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 20px;
+      }
+
+      label {
+        font-size: 14px;
+        color: #555;
+      }
+
+      input[type="text"] {
+        padding: 8px;
+        width: 100%;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      #message {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      #success-message {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      #error-message {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+
+      #host-list {
+        margin-top: 20px;
+      }
+
+      .host-item {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .delete-button {
+        color: white;
+        background-color: #ff4d4d;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .delete-button:hover {
+        background-color: #e60000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Host Replacer</h1>
+    <form id="host-form">
+      <label for="oldHost">Old Host:</label>
+      <input type="text" id="oldHost" placeholder="Enter old host" /><br />
+      <label for="newHost">New Host:</label>
+      <input type="text" id="newHost" placeholder="Enter new host" /><br />
+      <input type="submit" value="Save Hosts" />
+    </form>
+
+    <div id="message"></div>
+
+    <div id="host-list">
+      <h3>Saved Hosts</h3>
+      <div id="hosts"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
