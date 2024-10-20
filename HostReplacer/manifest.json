@@ -9,12 +9,12 @@
     "128": "icons/icon_128.png"
   },
   "permissions": [
-    "declarativeNetRequest",
-    "declarativeNetRequestWithHostAccess",
-    "storage"
+    "declarativeNetRequest",                //To modify and redirect network requests, which is necessary for changing host URLs.
+    "declarativeNetRequestWithHostAccess",  //Enables to modify the network requests across all hosts
+    "storage"                               //To save saved hosts
   ],
   "host_permissions": [
-    "*://*/*"
+    "*://*/*"                               //Read and modify content on any webpage
   ],
   "background": {
     "service_worker": "background.js"
